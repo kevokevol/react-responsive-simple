@@ -33,7 +33,7 @@ render(<App />, document.getElementById("root"));
 ```
 
 Yields:
-<div><img src="https://github.com/kevinl94303/react-breakpoint-components/blob/master/examples/screenshots/desktop-view.png?raw=true" width=50%/></div>
+<div><img src="https://github.com/kevinl94303/react-responsive-components/blob/master/examples/screenshots/desktop-view.png?raw=true" width=50%/></div>
 on screens above 992px wide and 
-<div><img src="https://github.com/kevinl94303/react-breakpoint-components/blob/master/examples/screenshots/mobile-view.png?raw=true" width=50%/></div>
+<div><img src="https://github.com/kevinl94303/react-responsive-components/blob/master/examples/screenshots/mobile-view.png?raw=true" width=50%/></div>
 on screens below 992px wide.
