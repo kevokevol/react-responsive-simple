@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kevinl94303/react-breakpoint.git"
+    "url": "git+https://github.com/kevinl94303/react-breakpoint-components.git"
   },
   "author": "kevinl94303",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kevinl94303/react-breakpoint/issues"
+    "url": "https://github.com/kevinl94303/react-breakpoint-components/issues"
   },
-  "homepage": "https://github.com/kevinl94303/react-breakpoint#readme",
+  "homepage": "https://github.com/kevinl94303/react-breakpoint-components#readme",
   "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"

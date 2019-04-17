@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Desktop = exports.MobileAndTablet = exports.Tablet = exports.Mobile = undefined;
+exports.LargeDesktop = exports.SmallDesktop = exports.Desktop = exports.MobileAndTablet = exports.Tablet = exports.Mobile = undefined;
 
 var _react = require('react');
 
@@ -41,8 +41,24 @@ function Desktop(props) {
         props.children
     );
 }
+function SmallDesktop(props) {
+    return _react2.default.createElement(
+        'div',
+        { className: 'hidden-xs hidden-sm hidden-lg' },
+        props.children
+    );
+}
+function LargeDesktop(props) {
+    return _react2.default.createElement(
+        'div',
+        { className: 'hidden-xs hidden-sm hidden-md' },
+        props.children
+    );
+}
 
 exports.Mobile = Mobile;
 exports.Tablet = Tablet;
 exports.MobileAndTablet = MobileAndTablet;
 exports.Desktop = Desktop;
+exports.SmallDesktop = SmallDesktop;
+exports.LargeDesktop = LargeDesktop;

@@ -21,10 +21,23 @@ function Desktop(props){
         {props.children}
     </div>
 }
+function SmallDesktop(props){
+    return <div className = 'hidden-xs hidden-sm hidden-lg'>
+        {props.children}
+    </div>
+}
+function LargeDesktop(props){
+    return <div className = 'hidden-xs hidden-sm hidden-md'>
+        {props.children}
+    </div>
+}
+
 
 export {
     Mobile,
     Tablet,
     MobileAndTablet,
-    Desktop
+    Desktop,
+    SmallDesktop,
+    LargeDesktop
 }
