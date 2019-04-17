@@ -1,0 +1,32 @@
+.visible-xs {
+    display: none;
+}
+.visible-sm {
+    display: none;
+}
+.visible-md {
+    display: none;
+}
+.visible-lg {
+    display: none;
+}
+@media only screen and (max-width: 768px){
+    .visible-xs {
+        display: block;
+    }
+}
+@media only screen and (min-width: 768px){
+    .visible-sm {
+        display: block;
+    }
+}
+@media only screen and (min-width: 992px){
+    .visible-md {
+        display: block;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .visible-lg {
+        display: block;
+    }
+}

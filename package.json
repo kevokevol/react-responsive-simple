@@ -1,0 +1,19 @@
+{
+  "name": "react-breakpoint-components",
+  "version": "0.0.1",
+  "description": "React components that are enabled according to viewport width",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinl94303/react-breakpoint.git"
+  },
+  "author": "kevinl94303",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinl94303/react-breakpoint/issues"
+  },
+  "homepage": "https://github.com/kevinl94303/react-breakpoint#readme"
+}
