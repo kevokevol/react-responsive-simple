@@ -1,8 +1,8 @@
-# react-breakpoint-components
+# react-responsive-components
 React components that are enabled according to viewport width
 
 # Usage
-Run `yarn add react-breakpoint-components` or `npm install react-breakpoint-components`
+Run `yarn add react-responsive-components` or `npm install react-responsive-components`
 Import the components you want at the start of the files you need them in. Components available:
 - `<Mobile>`: Renders on viewports <768px wide
 - `<MobileAndTablet>`: Renders on viewports <992px wide
@@ -18,7 +18,7 @@ should be sufficient.
 ```
 import React from 'react';
 import { render} from 'react-dom';
-import { MobileAndTablet, Desktop } from '../../src';
+import { MobileAndTablet, Desktop } from 'react-responsive-components';
 const App = () => (
     [
     <MobileAndTablet>
