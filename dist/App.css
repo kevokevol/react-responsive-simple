@@ -1,0 +1,39 @@
+.hidden-xs {
+    display: block;
+}
+
+.hidden-sm {
+    display: block;
+}
+
+.hidden-md {
+    display: block;
+}
+
+.hidden-lg {
+    display: block;
+}
+
+@media screen and (max-width:767px){
+    .hidden-xs {
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+    .hidden-sm {
+        display: none;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1199px){
+    .hidden-md {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .hidden-lg {
+        display: none;
+    }
+}

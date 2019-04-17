@@ -2,10 +2,12 @@
   "name": "react-breakpoint-components",
   "version": "0.0.1",
   "description": "React components that are enabled according to viewport width",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "transpile": "babel src -d dist --copy-files",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run transpile"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,12 @@
     "url": "https://github.com/kevinl94303/react-breakpoint/issues"
   },
   "homepage": "https://github.com/kevinl94303/react-breakpoint#readme",
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
