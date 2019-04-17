@@ -14,6 +14,8 @@ Import the components you want at the start of the files you need them in. Compo
 Maximally, we can define 3 different breakpoints, with 4 different views. Usually, `<MobileAndTablet>` and `<Desktop>` 
 should be sufficient. 
 
+In addition, you can define your own breakpoints with `<ResponsiveComponent>` using the props `min` and `max`. If you would like to leave either undefined, you can use `Number.MIN_VALUE` and `Number.MAX_VALUE`. For example: `<ResponsiveComponent min={1000} max={Number.MAX_VALUE}>` becomes active at viewports of >=1000px wide, and `<ResponsiveComponent min={Number.MIN_VALUE} max={1000}>` is the corresponding component which becomes active at viewports of <1000px wide.
+
 # Example
 ```
 import React from 'react';

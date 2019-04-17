@@ -1,39 +1,71 @@
 import React, { Component } from 'react'
-import './App.css'
 
-function Mobile(props) {
-    return <div className = 'hidden-sm hidden-md hidden-lg'>
-        {props.children}
-    </div>
-}
-function Tablet(props){
-    return <div className = 'hidden-xs hidden-md hidden-lg'>
-        {props.children}
-    </div>
-}
-function MobileAndTablet(props){
-    return <div className = 'hidden-md hidden-lg'>
-        {props.children}
-    </div>
-}
-function Desktop(props){
-    return <div className = 'hidden-xs hidden-sm'>
-        {props.children}
-    </div>
-}
-function SmallDesktop(props){
-    return <div className = 'hidden-xs hidden-sm hidden-lg'>
-        {props.children}
-    </div>
-}
-function LargeDesktop(props){
-    return <div className = 'hidden-xs hidden-sm hidden-md'>
-        {props.children}
-    </div>
+class ResponsiveComponent extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            display: this.breakpointActive(window.innerWidth),
+        }
+        this.breakpointActive = this.breakpointActive.bind(this)
+        this.updateDimensions = this.updateDimensions.bind(this)
+    }
+    breakpointActive(width){
+        return width >= this.props.min && width < this.props.max
+    }
+
+    updateDimensions() {
+        if (this.state.display != this.breakpointActive(window.innerWidth))
+            this.setState({display: this.breakpointActive(window.innerWidth)})
+    }
+
+    componentDidMount(){
+        window.addEventListener("resize", this.updateDimensions);
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener("resize", this.updateDimensions);
+    }
+
+    render(){
+        return this.state.display
+        ? <div>{this.props.children}</div> 
+        : <div></div>
+    }
 }
 
+function Mobile(props){
+    return <ResponsiveComponent min={Number.MIN_VALUE} max={768}>
+        {props.children}
+    </ResponsiveComponent>
+}
+function Tablet (props){
+    return <ResponsiveComponent min={768} max={992}>
+        {props.children}
+    </ResponsiveComponent>
+}
+function MobileAndTablet (props){
+    return <ResponsiveComponent min={Number.MIN_VALUE} max={992}>
+        {props.children}
+    </ResponsiveComponent>
+}
+function Desktop (props){
+    return <ResponsiveComponent min={992} max={Number.MAX_VALUE}>
+        {props.children}
+    </ResponsiveComponent>
+}
+function SmallDesktop (props){
+    return <ResponsiveComponent min={992} max={1200}>
+        {props.children}
+    </ResponsiveComponent>
+}
+function LargeDesktop (props){
+    return <ResponsiveComponent min={1200} max={Number.MAX_VALUE}>
+        {props.children}
+    </ResponsiveComponent>
+}
 
 export {
+    ResponsiveComponent,
     Mobile,
     Tablet,
     MobileAndTablet,
