@@ -1,7 +1,11 @@
-import { ExtraSmall, Small, Medium, Large } from './App'
-export default {
-    ExtraSmall,
-    Small,
-    Medium,
-    Large
+import { 
+    Mobile,
+    Tablet,
+    MobileAndTablet,
+    Desktop } from './App'
+export {
+    Mobile,
+    Tablet,
+    MobileAndTablet,
+    Desktop
 }

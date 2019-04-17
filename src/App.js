@@ -1,28 +1,30 @@
 import React, { Component } from 'react'
+import './App.css'
 
-function ExtraSmall(props) {
-    return <div className = 'visible-xs'>
+function Mobile(props) {
+    return <div className = 'hidden-sm hidden-md hidden-lg'>
         {props.children}
     </div>
 }
-function Small(props){
-    return <div className = 'visible-sm'>
+function Tablet(props){
+    return <div className = 'hidden-xs hidden-md hidden-lg'>
         {props.children}
     </div>
 }
-function Medium(props){
-    return <div className = 'visible-md'>
+function MobileAndTablet(props){
+    return <div className = 'hidden-md hidden-lg'>
         {props.children}
     </div>
 }
-function Large(props){
-    return <div className = 'visible-lg'>
+function Desktop(props){
+    return <div className = 'hidden-xs hidden-sm'>
         {props.children}
     </div>
 }
+
 export {
-    ExtraSmall,
-    Small,
-    Medium,
-    Large
+    Mobile,
+    Tablet,
+    MobileAndTablet,
+    Desktop
 }
