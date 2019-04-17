@@ -1,5 +1,5 @@
 {
-  "name": "react-breakpoint-components",
+  "name": "react-responsive-simple",
   "version": "0.0.1",
   "description": "React components that are enabled according to viewport width",
   "main": "dist/index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kevinl94303/react-breakpoint-components.git"
+    "url": "git+https://github.com/kevinl94303/react-responsive-simple.git"
   },
   "author": "kevinl94303",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kevinl94303/react-breakpoint-components/issues"
+    "url": "https://github.com/kevinl94303/react-responsive-simple/issues"
   },
-  "homepage": "https://github.com/kevinl94303/react-breakpoint-components#readme",
+  "homepage": "https://github.com/kevinl94303/react-responsive-simple#readme",
   "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
