@@ -1,5 +1,5 @@
 # react-responsive-simple
-React components that are enabled according to viewport width
+React components that are enabled according to viewport width. [View on NPM](https://www.npmjs.com/package/react-responsive-simple)
 
 # Usage
 Run `yarn add react-responsive-simple` or `npm install react-responsive-simple`
