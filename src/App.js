@@ -10,7 +10,14 @@ class ResponsiveComponent extends Component {
         this.updateDimensions = this.updateDimensions.bind(this)
     }
     breakpointActive(width){
-        return width >= this.props.min && width < this.props.max
+        if (!this.props.min && !this.props.max)
+            return true
+        else if (!this.props.min)
+            return width < this.props.max
+        else if (!this.props.max)
+            return width >= this.props.min
+        else
+            return width >= this.props.min && width < this.props.max
     }
 
     updateDimensions() {
@@ -44,12 +51,12 @@ function Tablet (props){
     </ResponsiveComponent>
 }
 function MobileAndTablet (props){
-    return <ResponsiveComponent min={Number.MIN_VALUE} max={992}>
+    return <ResponsiveComponent max={992}>
         {props.children}
     </ResponsiveComponent>
 }
 function Desktop (props){
-    return <ResponsiveComponent min={992} max={Number.MAX_VALUE}>
+    return <ResponsiveComponent min={992}>
         {props.children}
     </ResponsiveComponent>
 }
@@ -59,7 +66,7 @@ function SmallDesktop (props){
     </ResponsiveComponent>
 }
 function LargeDesktop (props){
-    return <ResponsiveComponent min={1200} max={Number.MAX_VALUE}>
+    return <ResponsiveComponent min={1200}>
         {props.children}
     </ResponsiveComponent>
 }
