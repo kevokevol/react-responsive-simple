@@ -4,12 +4,14 @@ import {
     MobileAndTablet,
     Desktop,
     SmallDesktop,
-    LargeDesktop } from './App'
+    LargeDesktop,
+    ResponsiveComponent } from './App'
 export {
     Mobile,
     Tablet,
     MobileAndTablet,
     Desktop,
     SmallDesktop,
-    LargeDesktop
+    LargeDesktop,
+    ResponsiveComponent
 }
